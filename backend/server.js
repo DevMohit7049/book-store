@@ -4,7 +4,13 @@ const cors = require('cors')
 const db  = require('./db');
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());
-app.use(cors())
+
+app.use(cors({
+    origin:['https://book-store-two-kappa.vercel.app'],
+    methods:['POST','GET','PUT','DELETE'],
+    credentials:true
+}))
+
 require('dotenv').config();
 const PORT = process.env.PORT || 3000;
 
@@ -24,10 +30,7 @@ app.use('/cart',userCartRoutes);
 const userOrder = require('./Routes/orderRoutes');
 app.use('/order',userOrder);
 
-// app.use((req, res, next) => {
-//     res.header('Access-Control-Allow-Origin', '*');
-//     next();
-//   })
+
 
 
 app.listen(PORT,()=>{
