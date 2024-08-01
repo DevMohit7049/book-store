@@ -24,11 +24,11 @@ app.use('/cart',userCartRoutes);
 const userOrder = require('./Routes/orderRoutes');
 app.use('/order',userOrder);
 
-app.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', '*');
-    next();
-  })
-  
+// app.use((req, res, next) => {
+//     res.header('Access-Control-Allow-Origin', '*');
+//     next();
+//   })
+
 
 app.listen(PORT,()=>{
     console.log("Listenign on==",PORT);
