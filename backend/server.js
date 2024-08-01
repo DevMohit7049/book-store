@@ -7,6 +7,7 @@ app.use(bodyParser.json());
 
 app.use(cors({
     origin:['https://book-store-two-kappa.vercel.app'],
+    allowedHeaders: 'Content-Type,Authorization',
     methods:['POST','GET','PUT','DELETE'],
     credentials:true
 }))
