@@ -9,7 +9,7 @@ const RecentlyAddedBook = () => {
   useEffect(()=>{
  
         const fatchBooks = async ()=>{
-          const response = await axios.get('http://localhost:3000/book/get-recent-book');
+          const response = await axios.get('https://book-store-iwgk.onrender.com/book/get-recent-book');
           setData(response.data.data)
         }
       fatchBooks();

@@ -15,7 +15,7 @@ const Favourites = () => {
   useEffect(()=>{
    
    const fatchFavouritesBook = async()=>{
-       const response = await axios.get(`http://localhost:3000/favourits/get-favourites-book`,{headers});
+       const response = await axios.get(`https://book-store-iwgk.onrender.com/favourits/get-favourites-book`,{headers});
        setFavouritesBook(response.data.data);
     }
 

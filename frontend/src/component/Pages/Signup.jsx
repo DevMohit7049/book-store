@@ -28,7 +28,7 @@ const Signup = () => {
            alert("All Fields Are Required");
          }
          else{
-            const response = await axios.post(`http://localhost:3000/user/signup`,Values);
+            const response = await axios.post(`https://book-store-iwgk.onrender.com/user/signup`,Values);
             alert(response.data.message);
             navigate('/login');
          }

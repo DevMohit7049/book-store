@@ -40,7 +40,7 @@ const UpdateBook = () => {
                 alert("All Fields Require");
             }
             else{
-                  const response = await axios.put('http://localhost:3000/book/update-book',BookData,{headers});
+                  const response = await axios.put('https://book-store-iwgk.onrender.com/book/update-book',BookData,{headers});
                   setBookData({
                     url:"",
                     title:"",
@@ -63,7 +63,7 @@ const UpdateBook = () => {
     useEffect(()=>{
 
        const FatchBookData=async()=>{
-          const response = await axios.get(`http://localhost:3000/book/get-book-details/${id}`);
+          const response = await axios.get(`https://book-store-iwgk.onrender.com/book/get-book-details/${id}`);
           setBookData(response.data.data);
        }
         FatchBookData();

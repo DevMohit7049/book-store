@@ -9,7 +9,7 @@ const AllBook = () => {
   useEffect(()=>{
  
         const fatchBooks = async ()=>{
-          const response = await axios.get('http://localhost:3000/book/get-all-books');
+          const response = await axios.get('https://book-store-iwgk.onrender.com/book/get-all-books');
           setBookData(response.data.data);
         }
    

@@ -18,7 +18,7 @@ const Profile = () => {
   useEffect(()=>{
 
         const fatchUserInfo = async ()=>{
-             const response = await axios.get(`http://localhost:3000/user/get-userInfo`,{headers});
+             const response = await axios.get(`https://book-store-iwgk.onrender.com/user/get-userInfo`,{headers});
              setUserData(response.data);
         }
         fatchUserInfo();

@@ -21,7 +21,7 @@ const Cart = () => {
    useEffect(()=>{
 
         const fatchCart = async()=>{
-            const response = await axios.get(`http://localhost:3000/cart/get-cart-details`,{headers});
+            const response = await axios.get(`https://book-store-iwgk.onrender.com/cart/get-cart-details`,{headers});
             setCart(response.data.data);
 
         }
@@ -45,7 +45,7 @@ const Cart = () => {
 
    const placeOrder=async()=>{
        try {
-          const response = await axios.post(`http://localhost:3000/order/place-order`,{order:Cart},{headers});
+          const response = await axios.post(`https://book-store-iwgk.onrender.com/order/place-order`,{order:Cart},{headers});
           alert(response.data.message);
           navigate('/profile/OrderHistory')
        } catch (error) {
@@ -55,7 +55,7 @@ const Cart = () => {
 
    const deleteItem = async(bookid)=>{
      
-     const response = await axios.put(`http://localhost:3000/cart/remove-from-cart/${bookid}`,{},{headers});
+     const response = await axios.put(`https://book-store-iwgk.onrender.com/cart/remove-from-cart/${bookid}`,{},{headers});
      alert(response.data.message);
    }
 

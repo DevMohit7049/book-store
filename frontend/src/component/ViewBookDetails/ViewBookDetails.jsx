@@ -22,7 +22,7 @@ const ViewBookDetails = () => {
   useEffect(() => {
     const fatchBooks = async () => {
       const response = await axios.get(
-        `http://localhost:3000/book/get-book-details/${id}`
+        `https://book-store-iwgk.onrender.com/book/get-book-details/${id}`
       );
       setViewBook(response.data.data);
     };
@@ -40,18 +40,18 @@ const ViewBookDetails = () => {
 
   //Add book in favourites //  
   const handleFavourites= async()=>{
-     const response = await axios.put(`http://localhost:3000/favourits/add-book-to-favourites`,{},{headers})
+     const response = await axios.put(`https://book-store-iwgk.onrender.com/favourits/add-book-to-favourites`,{},{headers})
       alert(response.data.message);
     }
 
 
   const handleCart = async()=>{
-    const response = await axios.put(`http://localhost:3000/cart/add-to-cart`,{},{headers})
+    const response = await axios.put(`https://book-store-iwgk.onrender.com/cart/add-to-cart`,{},{headers})
     alert(response.data.message);
   }
 
   const DeleteBook=async()=>{
-    const response = await axios.delete(`http://localhost:3000/book/delete-book`,{headers});
+    const response = await axios.delete(`https://book-store-iwgk.onrender.com/book/delete-book`,{headers});
     alert(response.data.message);
     navigate('/all-books')
     

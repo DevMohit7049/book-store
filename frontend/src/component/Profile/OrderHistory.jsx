@@ -15,7 +15,7 @@ const OrderHistory = () => {
    useEffect(()=>{
 
      const fatchOrder= async()=>{
-        const response = await axios.get(`http://localhost:3000/order/order-history`,{headers});
+        const response = await axios.get(`https://book-store-iwgk.onrender.com/order/order-history`,{headers});
         setorderHistory(response.data.data);
      }
 

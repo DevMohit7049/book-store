@@ -17,7 +17,7 @@ const Settings = () => {
    useEffect(()=>{
 
     const fatchUserData= async()=>{
-       const response = await axios.get(`http://localhost:3000/user/get-userInfo`,{headers});
+       const response = await axios.get(`https://book-store-iwgk.onrender.com/user/get-userInfo`,{headers});
        setProfileData(response.data);
        setValue({address:response.data.address});
     }
@@ -34,7 +34,7 @@ const Settings = () => {
   
   // handle submit for submiting the address //
   const handleSubmit=async()=>{
-    const response = await axios.put(`http://localhost:3000/user/update-address`,Value,{headers});
+    const response = await axios.put(`https://book-store-iwgk.onrender.com/user/update-address`,Value,{headers});
     alert(response.data.message);
   }
   return (

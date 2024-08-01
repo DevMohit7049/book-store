@@ -23,7 +23,7 @@ const AllOrder = () => {
   useEffect(() => {
     const FatchAllOrder = async () => {
       const response = await axios.get(
-        `http://localhost:3000/order/get-all-order`,
+        `https://book-store-iwgk.onrender.com/order/get-all-order`,
         { headers }
       );
       setAllOrder(response.data.data);
@@ -43,7 +43,7 @@ const AllOrder = () => {
     const id = AllOrder[index]._id;
     console.log(id);
     const response = await axios.put(
-      `http://localhost:3000/order/update-status/${id}`,Value,
+      `https://book-store-iwgk.onrender.com/order/update-status/${id}`,Value,
       { headers }
     );
     alert(response.data.message);
