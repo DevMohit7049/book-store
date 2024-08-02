@@ -26,7 +26,7 @@ const Login = () => {
        }
        else{
 
-          const response = await axios.post(`https://book-store-iwgk.onrender.com/user/login`,Values,{withCredentials:true});
+          const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/user/login`,Values,{withCredentials:true});
           
           // Calling the action and change the state of redux to login //
               dispatch(authAction.login());
