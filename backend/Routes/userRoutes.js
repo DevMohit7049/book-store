@@ -78,7 +78,7 @@ router.post('/login',async (req,res)=>{
                     {role:isExistingUser.role}
                 ];
 
-                const secretKey = process.env.JWT_SECRET
+                const secretKey = 123;
 
                 const token = jwt.sign({authClaims},secretKey,{})
 
