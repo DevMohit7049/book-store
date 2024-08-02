@@ -78,7 +78,7 @@ router.post('/login',async (req,res)=>{
                     {role:isExistingUser.role}
                 ];
 
-                const token = jwt.sign({authClaims},process.env.JWT_SECRET)
+                const token = jwt.sign({authClaims},process.env.JWT_SECRET,{ expiresIn: '1h'})
 
                 res.status(200).json({
                     id:isExistingUser._id,
