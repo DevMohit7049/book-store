@@ -5,11 +5,16 @@ const db  = require('./db');
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());
 
+const corsOptions = {
+    origin: 'https://book-store-two-kappa.vercel.app', 
+  };
+
 app.use(cors({
-    origin:['https://book-store-two-kappa.vercel.app'],
-    allowedHeaders: 'Content-Type,Authorization',
-    methods:['POST','GET','PUT','DELETE'],
-    credentials:true
+    // origin:['https://book-store-two-kappa.vercel.app'],
+    // allowedHeaders: 'Content-Type,authorization',
+    // methods:['POST','GET','PUT','DELETE'],
+    // credentials:true
+    corsOptions
 }))
 
 require('dotenv').config();
