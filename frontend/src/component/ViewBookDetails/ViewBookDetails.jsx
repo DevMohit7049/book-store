@@ -116,7 +116,7 @@ const ViewBookDetails = () => {
               </div>
             </div>
 
-            <div className="p-4 w-5/6 md:w-full sm:w-full">
+            <div className="p-4 w-full md:w-full sm:w-full">
               <h2 className="mt-4 font-semibold text-zinc-300">
                 {ViewBook.title}
               </h2>
