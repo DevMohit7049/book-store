@@ -10,8 +10,12 @@ const corsOptions = {
   };
 
 
-app.use(cors({corsOptions}))
-app.options('*',cors())
+app.use(cors({
+    corsOptions,
+    methods: ['GET'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    maxAge: 600
+}))
 
 
 require('dotenv').config();
