@@ -7,7 +7,7 @@ app.use(bodyParser.json());
 
 const corsOptions = {
     origin: 'https://book-store-two-kappa.vercel.app', 
-    Credential:true
+    credential:true,
   };
 
 
