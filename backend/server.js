@@ -7,11 +7,11 @@ app.use(bodyParser.json());
 
 const corsOptions = {
     origin: 'https://book-store-two-kappa.vercel.app', 
+    Credential:true
   };
 
 
 app.use(cors({corsOptions}));
-
 
 require('dotenv').config();
 const PORT = process.env.PORT || 3000;
